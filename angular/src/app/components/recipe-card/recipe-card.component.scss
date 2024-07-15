@@ -1,0 +1,83 @@
+$primery-color: rgba(205, 146, 19, 0.838);
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: url('../../../assets/balck-wood-wallpeper.png') no-repeat center center;
+    background-size: cover;
+}
+
+.recipe-card {
+    
+    width: 50vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $primery-color;
+}
+
+.recipe-image {
+    //background-color: rgb(252, 4, 177);
+    width: 22vh;
+    height: 28vh;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.recipe-content {
+    //background-color: rgb(4, 137, 253);
+    //border: 0.5px solid $primery-color;
+    width: 22vh;
+    height: 26vh;
+    padding: 7px;
+    margin: 5px;
+    z-index: 1;
+    backdrop-filter: blur(0.8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        color: rgba(203, 139, 3, 0.838);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+.recipe-detailes {
+    //background-color: aqua;
+    width: 22vh;
+    height: 5vh;
+    //margin-top: 14vh;
+    display: flex;
+    flex-direction: row;
+
+    h3 {
+        margin: 0;
+        padding: 3px;
+        color: rgba(203, 139, 3, 0.838);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+.btn-enter{
+    width: 16vh;
+    height: 4vh;
+    border: 0.3px solid $primery-color;
+    color: $primery-color;
+    background-color: transparent;
+    border-radius: 15px;
+}

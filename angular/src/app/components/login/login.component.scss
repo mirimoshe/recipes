@@ -1,0 +1,254 @@
+ $primery-color: rgba(205, 146, 19, 0.838);
+
+
+
+ // .login-body {
+ //     background-image: url('../../../assets/food3.jpeg');
+ //     background-size: cover;
+ //     width: 100%;
+ //     height: 97vh;
+ //     display: flex;
+ //     align-items: center;
+ //     justify-content: center;
+
+ // }
+
+ // .cards-container {
+ //     position: relative;
+ //     width: 30%;
+ //     height: 241px;
+ //     transform-style: preserve-3d;
+ //     text-align: center;
+ //     transition: transform 0.6s;
+ // }
+
+ // .login-body:hover .cards-container{
+ //     transform: rotateY(180deg);
+ // }
+
+ // .signup-form {
+ //     backface-visibility: hidden;
+ //     -webkit-backface-visibility: hidden;
+ //     transform: rotateY(180deg);
+ //     position: absolute;
+ //     border-top: 1px solid rgba(255, 255, 255, 0.5);
+ //     border-left: 1px solid rgba(255, 255, 255, 0.5);
+ //     border-radius: 15px;
+ //     background-color: #e1e1e116;
+ //     display: flex;
+ //     flex-direction: column;
+ //     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+ //     margin-left: 35%;
+ //     margin-top: 5%;
+ //     font-size: larger;
+ //     width: 100%;
+ //     height:100%;
+ //     padding: 15px;
+ //     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+ //     color: $primery-color;
+ //     padding-top: 25px;
+
+ //     input {
+ //         width: 80%;
+ //         border-radius: 15px;
+ //         border-color: $primery-color;
+ //         margin-left: 10%;
+ //         padding: 1px;
+ //     }
+
+ //     label {
+ //         margin-left: 10%;
+ //         padding-bottom: 2px;
+ //     }
+
+ //     button {
+ //         border-radius: 10px;
+ //         padding: 2px;
+ //         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+ //         width: 82%;
+ //         height: 31px;
+ //         background-color: rgb(255, 174, 0);
+ //         margin-left: 10%;
+ //         margin-top: 15px;
+ //         color: black;
+ //         font-size: medium;
+ //     }
+
+ // }
+
+ // .login-form {
+ //     backface-visibility: hidden;
+ //     -webkit-backface-visibility: hidden;
+ //     position: absolute;
+ //     border-top: 1px solid rgba(255, 255, 255, 0.5);
+ //     border-left: 1px solid rgba(255, 255, 255, 0.5);
+ //     border-radius: 15px;
+ //     background-color: #e1e1e116;
+ //     display: flex;
+ //     flex-direction: column;
+ //     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+ //     margin-left: 35%;
+ //     margin-top: 5%;
+ //     font-size: larger;
+ //     width: 100%;
+ //     height: 100%;
+ //     padding: 15px;
+ //     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+ //     color: $primery-color;
+ //     padding-top: 25px;
+
+ //     input {
+ //         width: 80%;
+ //         border-radius: 15px;
+ //         border-color: $primery-color;
+ //         margin-left: 10%;
+ //         padding: 1px;
+ //     }
+
+ //     label {
+ //         margin-left: 10%;
+ //         padding-bottom: 2px;
+ //     }
+
+ //     button {
+ //         border-radius: 10px;
+ //         padding: 2px;
+ //         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+ //         width: 82%;
+ //         height: 31px;
+ //         background-color: rgb(255, 174, 0);
+ //         margin-left: 10%;
+ //         margin-top: 15px;
+ //         color: black;
+ //         font-size: medium;
+ //     }
+
+ // }
+
+ .body {
+     font-family: Arial, Helvetica, sans-serif;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     margin: 0;
+     //background-image: url('../../../assets/food3.jpeg');
+     background: url('../../../assets/food3.jpeg') no-repeat center center;
+     background-size: cover;
+
+ }
+
+ .flip-card {
+     background-color: transparent;
+     width: 300px;
+     height: 300px;
+     perspective: 1000px;
+ }
+
+ .flip-card-inner {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     transition: transform 0.6s;
+     transform-style: preserve-3d;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ /*.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}*/
+ .flip-card-inner.flip {
+     transform: rotateY(180deg);
+ }
+
+ .flip-card-front,
+ .flip-card-back {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+ }
+
+ .flip-card-front {
+     //background-color: #bbb;
+     border-top: 1px solid rgba(255, 255, 255, 0.5);
+     border-left: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 15px;
+     background-color: #e1e1e116;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .flip-card-back {
+     //background-color: #2980b9;
+     border-top: 1px solid rgba(255, 255, 255, 0.5);
+     border-left: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 15px;
+     background-color: #e1e1e116;
+     color: white;
+     transform: rotateY(180deg);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+ }
+
+ label {
+     margin-bottom: 5px;
+ }
+
+ input {
+     margin-bottom: 10px;
+     padding: 5px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+     width: 80%;
+ }
+
+ button {
+     padding: 10px;
+     border-radius: 5px;
+     border: none;
+     background-color: $primery-color;
+     color: white;
+     cursor: pointer;
+     width: 85%;
+ }
+
+ button:hover {
+     background-color: $primery-color;
+ }
+
+ .a-register:hover {
+     color: rgb(74, 74, 240);
+ }
+
+ .title {
+     font-size: larger;
+     color: $primery-color ;
+     transform: translateX(-90px);
+ }
+
+ .error-div-class {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.error-div {
+    transform: translateY(-10px);
+    color: rgba(240, 248, 255, 0.794);
+    font-size: smaller;
+}

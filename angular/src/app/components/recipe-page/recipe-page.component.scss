@@ -1,0 +1,149 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-container {
+    //max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    //border: 2px solid #000;
+    //background-color: #fdf4e3;
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: url('../../../assets/balck-wood-wallpeper.png') no-repeat center center;
+    background-size: cover;
+}
+
+.recipe-header {
+    text-align: center;
+    border-bottom: 2px solid #b0b0b0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 12vh;
+}
+
+.recipe-name {
+    font-size: 2.5em;
+    color: #d35400;
+    margin: 0;
+}
+
+.recipe-category {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+.recipe-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #b0b0b0;
+}
+
+.recipe-details {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #b0b0b0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.recipe-details>* {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mat-icon {
+    padding: 10px;
+    color: #d35400;
+}
+
+.recipe-ingredients,
+.recipe-steps,
+.recipe-images {
+    margin-bottom: 20px;
+}
+
+.recipe-ingredients h2,
+.recipe-steps h2,
+.recipe-images h2 {
+    font-size: 1.5em;
+    color: #d35400;
+    border-bottom: 2px solid #b0b0b0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.layers {
+    //border: 1px solid #000;
+    padding: 10px;
+    //background-color: #f9e79f;
+}
+
+.layer {
+    margin-bottom: 10px;
+}
+
+.layer h3 {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin: 0 0 5px 0;
+
+}
+
+.layer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.layer li {
+    font-size: 1em;
+    color: #b0b0b0;
+    margin: 5px 0;
+}
+
+.recipe-steps ol {
+    padding-left: 20px;
+}
+
+.recipe-steps li {
+    margin: 10px 0;
+    color: #b0b0b0;
+}
+
+.recipe-images .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recipe-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #b0b0b0;
+}
+
+.battery {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .line {
+    //width: 20px;
+    height: 20px;
+    border: 2px solid #b0b0b0;
+    width: 2px;
+  }
+  
+  .line.filled {
+    background-color: #b0b0b0;
+  }

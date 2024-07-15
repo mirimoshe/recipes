@@ -1,0 +1,111 @@
+<div class="body">
+  <div class="flip-card">
+    <div class="flip-card-inner" [class.flip]="flipCard">
+      <div class="flip-card-front">
+        <form class="login-form" (submit)="submitLogin()">
+          <label class="title">Login</label>
+          <input id="email" [(ngModel)]="formData.email" name="email" required placeholder="Email" />
+          <input id="password" [(ngModel)]="formData.password" name="password" required placeholder="Password" />
+          <button type="submit">Login</button>
+          <p>Don't have an account? <a class="a-register" (click)="register()">Register</a></p>
+        </form>
+      </div>
+      <div class="flip-card-back">
+        <form class="signup-form" (submit)="submitSignUp()">
+          <label class="title">Sign up</label>
+          <input id="userName" [(ngModel)]="formData.userName" name="userName" required type="text" placeholder="Name" />
+          <input id="email" [(ngModel)]="formData.email" name="email" required placeholder="Email" />
+          <input id="password" [(ngModel)]="formData.password" name="password" required placeholder="Password"/>
+          <input id="address" [(ngModel)]="formData.address" name="address" required placeholder="Address" />
+          <button type="submit">Join Us</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- <div class="body">
+  <div class="flip-card">
+    <div class="flip-card-inner" [class.flip]="flipCard">
+      <div class="flip-card-front">
+        <form [formGroup]="loginForm" class="login-form" (ngSubmit)="submitLogin()">
+          <label class="title">Login</label>
+          <input id="email" formControlName="email" (blur)="email?.markAsTouched()" required placeholder="Email" />
+          <div class="error-div-class" *ngIf="email?.invalid && email?.touched">
+            <div class="error-div" *ngIf="email?.errors?.['required']">Email is required.</div>
+            <div class="error-div" *ngIf="email?.errors?.['email']">Invalid email format.</div>
+          </div>
+
+          <input id="password" formControlName="password" (blur)="password?.markAsTouched()" required
+            placeholder="Password" />
+          <div class="error-div-class" *ngIf="password?.invalid && password?.touched">
+            <div class="error-div" *ngIf="password?.errors?.['required']">Password is required.</div>
+            <div class="error-div" *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters long.
+            </div>
+            <div class="error-div" *ngIf="password?.errors?.['maxlength']">Password cannot be more than 12 characters
+              long.</div>
+            <div class="error-div" *ngIf="password?.errors?.['pattern']">Password can only contain letters and numbers.
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="loginForm.invalid">Login</button>
+          <p>Don't have an account? <a class="a-register" (click)="register()">Register</a></p>
+        </form>
+
+      </div>
+      <div class="flip-card-back">
+       
+        <form [formGroup]="signupForm" class="signup-form" (ngSubmit)="submitSignUp()">
+          <label class="title">Sign up</label>
+
+          
+          <input id="userName" formControlName="userName" (blur)="userName?.markAsTouched()" placeholder="Name" />
+          <div class="error-div-class" *ngIf="userName?.invalid && userName?.touched">
+            <div class="error-div" *ngIf="userName?.errors?.['required']">Name is required.</div>
+          </div>
+
+          
+          <input id="email" formControlName="email" (blur)="email?.markAsTouched()" placeholder="Email" />
+          <div class="error-div-class" *ngIf="email?.invalid && email?.touched">
+            <div class="error-div" *ngIf="email?.errors?.['required']">Email is required.</div>
+            <div class="error-div" *ngIf="email?.errors?.['email']">Invalid email format.</div>
+          </div>
+
+          
+          <input id="password" formControlName="password" (blur)="password?.markAsTouched()" placeholder="Password" />
+          <div class="error-div-class" *ngIf="password?.invalid && password?.touched">
+            <div class="error-div" *ngIf="password?.errors?.['required']">Password is required.</div>
+            <div class="error-div" *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters long.
+            </div>
+            <div class="error-div" *ngIf="password?.errors?.['maxlength']">Password cannot be more than 12 characters
+              long.
+            </div>
+            <div class="error-div" *ngIf="password?.errors?.['pattern']">Password can only contain letters and numbers.
+            </div>
+          </div>
+
+
+          <input id="address" formControlName="address" (blur)="address?.markAsTouched()" placeholder="Address" />
+          <div class="error-div-class" *ngIf="address?.invalid && address?.touched">
+            <div class="error-div" *ngIf="address?.errors?.['required']">Address is required.</div>
+          </div>
+
+          <button type="submit" [disabled]="signupForm.invalid">Join Us</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+
+ <!-- <form class="signup-form" (submit)="submitSignUp()">
+                    <label class="title">Sign up</label>
+                    <input id="userName" [(ngModel)]="formData.userName" name="userName" required type="text"placeholder="Name" />
+                    <input id="email" [(ngModel)]="formData.email" name="email" required placeholder="Email" />
+                    <input id="password" [(ngModel)]="formData.password" name="password" requiredplaceholder="Password" />
+                    <input id="address" [(ngModel)]="formData.address" name="address" required placeholder="Address" />
+                    <button type="submit">Join Us</button>
+                </form> -->

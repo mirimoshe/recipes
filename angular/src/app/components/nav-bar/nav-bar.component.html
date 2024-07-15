@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <li><a routerLink="login" routerLinkActive="active">login</a></li>
+        <li><a routerLink="about">about</a></li>
+        <li><a routerLink="category">categories</a></li>
+        <li><a routerLink="recipes">recipe</a></li>
+        <li *ngIf="isLog"><a routerLink="newrecipe">new recipe</a></li>
+        <li *ngIf="isLog"><a routerLink="myrecipes">my recipes</a></li>
+        
+    </ul>
+</nav>
+<router-outlet></router-outlet>

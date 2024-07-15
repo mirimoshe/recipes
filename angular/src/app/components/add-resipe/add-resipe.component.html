@@ -1,0 +1,189 @@
+<div class="body">
+    <mat-stepper class="addition-form" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Step 1</ng-template>
+                <div class="form-row">
+                    <input formControlName="recipeName" placeholder="Recipe Name" />
+                    <input formControlName="category" placeholder="Category" />
+                </div>
+                <textarea formControlName="recipeDescription" id="descriptionRecipe"
+                    placeholder="Description of the recipe"></textarea>
+                <div class="row">
+                    <div class="detailes-num">
+                        <input formControlName="hours" type="number" value="0" />
+                        <p>hours</p>
+                    </div>
+                    <div class="detailes-num">
+                        <input formControlName="minutes" type="number" value="30" />
+                        <p>minutes</p>
+                    </div>
+                    <select formControlName="difficulty" id="difficultySelect">
+                        <option class="op-level" value="" disabled selected>Level</option>
+                        <option *ngFor="let num of Difficulty" [value]="num">{{ num }}</option>
+                    </select>
+                    <div class="detailes-num" id="dishesAmount">
+                        <input formControlName="dishes" type="number" value="0" />
+                        <p>dishes</p>
+                    </div>
+                    <div class="detailes-num">
+                        <mat-slide-toggle formControlName="isPrivate" />
+                        <p>recipe private</p>
+                    </div>
+                </div>
+                <div class="btn-direction">
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Ingredients ">
+            <form [formGroup]="secondFormGroup" id="allingredient" class="form-container">
+                <div class="ingredientForm">
+                    <input placeholder="Ingredients for " />
+                    <p class="amountTitle">amount</p>
+                    <div class="addIngredient" id="addIngredient">
+                        <input formControlName="amount" type="number" value="0" />
+                        <input formControlName="ingredient" placeholder="Ingredient " />
+                        <button (click)="createDiv($event)">+</button>
+                    </div>
+                    <button class="addLayer" (click)="createNewLayer($event)">add layer</button>
+                </div>
+            </form>
+            <div class="btn-direction">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+
+        <mat-step [stepControl]="thirdFormGroup" label="instruction">
+            <form [formGroup]="thirdFormGroup">
+                <div id="prepStepForm">
+                    <div class="prepStep">
+                        <p>1</p>
+                        <textarea placeholder="prepertion description "></textarea>
+                        <button (click)="createprepDiv($event)">+</button>
+                    </div>
+                </div>
+                <div class="btn-direction">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="forthFormGroup">
+            <ng-template matStepLabel>Done</ng-template>
+            <form [formGroup]="forthFormGroup">
+                <div class="additionImage">
+                    <button (click)="addImage()" id="addImage">Add Image</button>
+                    <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+                </div>
+                <div id="imageContainer">
+                    <img *ngFor="let img of imageUrls" [src]="img" alt="Selected image" class="selected-image">
+                </div>
+                <button (click)="onSubmit()" id="doneBtn">Done</button>
+                <div class="btn-direction">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+
+        </mat-step>
+
+    </mat-stepper>
+</div>
+
+<!-- <div class="body">
+    <mat-stepper class="addition-form" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Step 1</ng-template>
+                <div class="form-row">
+                    <input formControlName="recipeName" placeholder="Recipe Name" />
+                    <input formControlName="category" placeholder="Category" />
+                </div>
+                <textarea formControlName="recipeDescription" id="descriptionRecipe"
+                    placeholder="Description of the recipe"></textarea>
+                <div class="row">
+                    <div class="detailes-num">
+                        <input formControlName="hours" type="number" value="0" />
+                        <p>hours</p>
+                    </div>
+                    <div class="detailes-num">
+                        <input formControlName="minutes" type="number" value="30" />
+                        <p>minutes</p>
+                    </div>
+                    <select formControlName="difficulty" id="difficultySelect">
+                        <option class="op-level" value="" disabled selected>Level</option>
+                        <option *ngFor="let num of Difficulty" [value]="num">{{ num }}</option>
+                    </select>
+                    <div class="detailes-num" id="dishesAmount">
+                        <input formControlName="dishes" type="number" value="0" />
+                        <p>dishes</p>
+                    </div>
+                    <div class="detailes-num">
+                        <mat-slide-toggle formControlName="isPrivate" />
+                        <p>recipe private</p>
+                    </div>
+                </div>
+                <div class="btn-direction">
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Ingredients ">
+            <form [formGroup]="secondFormGroup" id="allingredient" class="form-container">
+                <div class="ingredientForm">
+                    <input placeholder="Ingredients for " />
+                    <p class="amountTitle">amount</p>
+                    <div class="addIngredient" id="addIngredient">
+                        <input formControlName="amount" type="number" value="0" />
+                        <input formControlName="ingredient" placeholder="Ingredient " />
+                        <button (click)="createDiv($event)">+</button>
+                    </div>
+                    <button class="addLayer" (click)="createNewLayer($event)">add layer</button>
+                </div>
+            </form>
+            <div class="btn-direction">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+
+        <mat-step [stepControl]="thirdFormGroup" label="instruction">
+            <form [formGroup]="thirdFormGroup">
+                <div id="prepStepForm">
+                    <div class="prepStep">
+                        <p>1</p>
+                        <textarea formControlName="prepStep" placeholder="prepertion description "></textarea>
+                        <button (click)="createprepDiv($event)">+</button>
+                    </div>
+                </div>
+                <div class="btn-direction">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="forthFormGroup">
+            <ng-template matStepLabel>Done</ng-template>
+            <form [formGroup]="forthFormGroup">
+                <div class="additionImage">
+                    <button (click)="addImage()" id="addImage">Add Image</button>
+                    <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+                </div>
+                <div id="imageContainer">
+                    <img *ngFor="let img of imageUrls" [src]="img" alt="Selected image" class="selected-image">
+                </div>
+                <button (click)="onSubmit()" id="doneBtn">Done</button>
+                <div class="btn-direction">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+
+        </mat-step>
+
+    </mat-stepper>
+</div> -->

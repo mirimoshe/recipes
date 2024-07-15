@@ -1,0 +1,49 @@
+<div class="recipe-container" *ngIf="recipe">
+    <div class="recipe-header">
+        <h1 class="recipe-name">{{ recipe.recipeName }}</h1>
+        <p class="recipe-category">{{ recipe.categoryName }}</p>
+    </div>
+    <div class="recipe-description">
+        <p>{{ recipe.description }}</p>
+    </div>
+    <div class="recipe-details">
+        <p><mat-icon>schedule</mat-icon> {{ recipe.preparationTime |timeFormatter}}</p>
+        <!-- <p><mat-icon>bar_chart</mat-icon> {{ recipe.difficultyLevel|battery }}</p> -->
+        <p><mat-icon>bar_chart</mat-icon>
+            <span class="battery">
+                <span *ngFor="let line of (recipe.difficultyLevel | battery)" [class.filled]="line === 1"
+                    class="line"></span>
+            </span>
+        </p>
+        <p><mat-icon>restaurant</mat-icon> {{ recipe.dishesAmount }}</p>
+        <p><mat-icon>person</mat-icon> {{ user.userName }}</p>
+        <p><mat-icon>event</mat-icon> {{ recipe.additionDate|dateFormat}}</p>
+    </div>
+    <div class="recipe-ingredients">
+        <h2>Ingredients</h2>
+        <div class="layers" *ngFor="let layer of recipe.layers">
+            <div class="layer">
+                <h3>{{ layer.layerDescription }}</h3>
+                <ul>
+                    <li *ngFor="let ingredient of layer.ingredients">
+                        {{ ingredient.amount }} {{ ingredient.ingredient }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="recipe-steps">
+        <h2>Preparation Steps</h2>
+        <ol>
+            <li *ngFor="let step of recipe.preparationSteps">
+                {{ step }}
+            </li>
+        </ol>
+    </div>
+    <!-- <div class="recipe-images">
+      <h2>Recipe Images</h2>
+      <div class="images">
+        <img *ngFor="let image of recipe.recipeImages" [src]="image" alt="Recipe Image">
+      </div>
+    </div> -->
+</div>

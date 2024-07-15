@@ -1,0 +1,13 @@
+<!-- <p>recipe-cards works!</p> -->
+<div class="body">
+    <div class="recipes-container">
+        <div class="recipe" *ngFor="let recipe of list">
+            <app-recipe-card 
+            [recipeName]="recipe.recipeName" 
+            [prepTime]="recipe.preparationTime"
+            [dishes]="recipe.dishesAmount"
+            [recipeId]="recipe._id"
+            ></app-recipe-card>
+        </div>
+    </div>
+</div>

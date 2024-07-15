@@ -1,0 +1,26 @@
+.hero {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    height: 83vh;
+    width: 100%;
+    background: url('../../../assets/balck-wood-wallpeper.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
+.hero h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+}

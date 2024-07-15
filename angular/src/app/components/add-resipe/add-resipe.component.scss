@@ -1,0 +1,331 @@
+$bkground-color: #ccccccbd;
+$primery-color: rgba(229, 139, 21, 0.838);
+$main-color: rgba(233, 160, 14, 0.82);
+$light-color: rgba(229, 139, 21, 0.714);
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    //background-image: url('../../../assets/food3.jpeg');
+    background: url('../../../assets/food3.jpeg') no-repeat center center;
+    background-size: cover;
+
+}
+
+.addition-form {
+    background-color: #e1e1e116;
+    min-height: 50vh;
+    height: auto;
+    width: 100vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2%;
+    //transform: translateY(-20%);
+    overflow-y: auto;
+    //position: relative;
+    margin: 5%;
+
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    width: 30vh;
+    background-color: $bkground-color;
+    margin: 5px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#descriptionRecipe {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    width: 95.3%;
+    background-color: $bkground-color;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+// .prep-time input {
+//     width: 8vh;
+// }
+
+// .prep-time p {
+//     color: #cccccc;
+//     transform: translateX(10px) translateY(-18px);
+//     font-size: small;
+// }
+
+.detailes-num {
+
+    margin: 0;
+
+    input {
+        width: 8vh;
+        margin: 0;
+    }
+
+    p {
+        color: #cccccc;
+        transform: translateX(4px) translateY(-13px);
+        font-size: small;
+    }
+}
+
+#difficultySelect {
+    background-color: $bkground-color;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    height: 4vh;
+    width: 12vh;
+    margin-left: 3vh;
+}
+
+#dishesAmount {
+    margin-left: 2vh;
+}
+
+.mat-mdc-slide-toggle.mat-accent {
+    --mdc-switch-selected-focus-state-layer-color: rgba(229, 139, 21, 0.838);
+    --mdc-switch-selected-handle-color: rgba(229, 139, 21, 0.838);
+    --mdc-switch-selected-hover-state-layer-color: rgba(229, 139, 21, 0.838);
+    --mdc-switch-selected-pressed-state-layer-color: rgba(229, 139, 21, 0.838);
+    --mdc-switch-selected-focus-handle-color: rgba(233, 160, 14, 0.82);
+    --mdc-switch-selected-hover-handle-color: rgba(233, 160, 14, 0.82);
+    --mdc-switch-selected-pressed-handle-color: rgba(233, 160, 14, 0.82);
+    --mdc-switch-selected-focus-track-color: rgba(183, 133, 25, 0.802);
+    --mdc-switch-selected-hover-track-color: rgba(183, 133, 25, 0.802);
+    --mdc-switch-selected-pressed-track-color: rgba(183, 133, 25, 0.802);
+    --mdc-switch-selected-track-color: rgba(183, 133, 25, 0.802);
+    margin-left: 1vh;
+    height: 4vh;
+}
+
+.mat-stepper-horizontal.mat-stepper-label-position-end.ng-untouched.ng-pristine.ng-invalid.ng-tns-c3820311392-0 {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+}
+
+
+::ng-deep .mat-step-label {
+    color: #cccccc;
+    /* Change this to your desired color */
+    /* Optional: Make the text bold */
+}
+
+/* Additional specificity to ensure it targets correctly */
+::ng-deep .mat-horizontal-stepper-header .mat-step-label {
+    color: #cccccc;
+    /* Change this to your desired color */
+}
+
+::ng-deep .mat-step-label {
+    color: #cccccc !important;
+    /* Use !important if necessary */
+    font-size: medium;
+
+}
+
+::ng-deep .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
+    background-color: $primery-color;
+}
+
+::ng-deep .mat-step-icon-state-edit {
+    background-color: $primery-color !important;
+}
+
+::ng-deep .mat-step-icon.mat-step-icon-state-number {
+    height: 4vh;
+    background-color: $primery-color ;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+    background-color: #cccccc;
+}
+
+
+.amountTitle {
+    margin: 0;
+    color: #cccccc;
+    transform: translateX(4px) translateY(3px);
+    font-size: small;
+    //margin-top: 8px;
+}
+
+.addIngredient {
+    height: 5vh;
+
+    input[type=number] {
+        width: 20vh;
+    }
+
+    button {
+        height: 4vh;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        background-color: $bkground-color;
+        width: 6vh;
+    }
+}
+
+.ingredientForm {
+    height: auto;
+}
+
+#prepStepForm {
+    height: auto;
+}
+
+.prepStep {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2px;
+
+    textarea {
+        width: 58vh;
+        height: 5vh;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        background-color: $bkground-color;
+        margin: 2px;
+        z-index: 1;
+    }
+
+    button {
+        height: 6.5vh;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        background-color: $bkground-color;
+        width: 6vh;
+        margin: 2px;
+    }
+
+    p {
+        color: rgba(204, 204, 204, 0.7647058824);
+        font-weight: 800;
+        font-size: xx-large;
+        transform: translateX(-2px) translateY(-28px);
+    }
+}
+
+#addImage {
+    border-radius: 50%;
+    height: 20vh;
+    width: 20vh;
+    // color: rgba(204, 204, 204, 0.7647058824);
+    color: $primery-color;
+    font-weight: 500;
+    font-size: large;
+    background-color: #161623aa;
+
+}
+
+.additionImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#imageContainer {
+    height: auto;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        // border: 0.3px solid #ccccccac;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        margin: 3px;
+    }
+}
+
+ .btn-direction {
+    // display: flex;
+    // flex-direction: row;
+    // height: 10vh;
+    // /* Pushes it to the bottom */
+    // // position: sticky;
+    // // bottom: 0;
+    // position: fixed;
+
+    // display: flex;
+    // justify-content: space-between;
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // background: #fff; /* Add background color to make sure it stands out */
+    // padding: 10px;
+    // border-top: 1px solid #ccc;
+    // z-index: 1000; /* Ensures the buttons are always on top */
+    
+
+    button {
+        padding: 5px;
+        border-radius: 5px;
+        border: 0.5px solid #161623d3;
+        width: 10vh;
+        height: 5vh;
+        background-color: $light-color;
+        margin: 5px;
+        color: #161623d3;
+    }
+}
+
+.addLayer {
+    width: 62vh;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #161623d3;
+    background-color: $light-color;
+}
+
+.ingredientForm{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#doneBtn{
+    width: 77vh;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #161623d3;
+    background-color: $light-color;
+}

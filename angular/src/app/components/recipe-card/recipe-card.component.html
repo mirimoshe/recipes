@@ -1,0 +1,16 @@
+<div class="body">
+    <div class="recipe-card">
+        <div class="recipe-image" >
+            <img [src]="selectedImageSource" alt="Random Image">
+        </div>
+        <div class="recipe-content">
+            <h2>{{recipeName}}</h2>
+            <div class="recipe-detailes">
+               <h3>{{ prepTime | timeFormatter }}</h3>
+               <h3>{{dishes}} dishes</h3>
+            </div>
+            <button (click)="navigetToRecipe()" class="btn-enter">enter</button>
+        </div>
+    </div>
+</div>
+<!-- //class="recipe-image" -->

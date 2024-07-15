@@ -1,0 +1,21 @@
+<div class="about-container">
+    <div class="intro">
+        <h1>About Miri Moshe</h1>
+        <p>Welcome to my vintage-style recipe website where tradition meets taste.</p>
+    </div>
+    <div class="timeline">
+        <div class="timeline-item" *ngFor="let item of timeline">
+            <h3>{{item.year}}</h3>
+            <p>{{item.event}}</p>
+        </div>
+    </div>
+    <div class="featured-recipes">
+        <h2>Featured Recipes</h2>
+        <div class="recipe-card" *ngFor="let recipe of featuredRecipes">
+            <!-- <img [src]="recipe.image" alt="{{recipe.title}}"> -->
+            <h3>{{recipe.title}}</h3>
+            <p>{{recipe.description}}</p>
+        </div>
+    </div>
+</div>
+

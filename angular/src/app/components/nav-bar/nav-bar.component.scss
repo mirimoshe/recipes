@@ -1,0 +1,38 @@
+$primery-color: rgba(229, 139, 21, 0.838);
+$main-color: rgba(233, 160, 14, 0.82);
+
+nav {
+    background: transparent;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    //position: fixed;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-weight: 650;
+
+        li {
+            padding: 10px;
+            height: 100%;
+            font-size: larger;
+            color: $primery-color ;
+
+            a {
+                text-decoration: none;
+                color: $primery-color ;
+
+                &.active {
+
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+a:hover {
+    color: $main-color ;
+}
